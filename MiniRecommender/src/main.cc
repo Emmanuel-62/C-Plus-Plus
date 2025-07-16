@@ -18,7 +18,6 @@ int main() {
     std::cout << "\n2. Utilisateurs dans le système:" << std::endl;
     systeme.afficher_utilisateurs();
     
-    // Tester les recommandations pour chaque utilisateur
     std::cout << "\n3. Recommandations:" << std::endl;
     
     std::vector<std::string> utilisateurs = {"Alice", "Bob", "Charlie"};
@@ -38,14 +37,12 @@ int main() {
         }
     }
     
-    // Test avec un utilisateur inexistant
     std::cout << "\n4. Test avec utilisateur inexistant:" << std::endl;
     auto reco_inexistant = systeme.recommander_films_pour("David");
     if (reco_inexistant.empty()) {
         std::cout << "✓ Gestion correcte d'un utilisateur inexistant" << std::endl;
     }
     
-    // Afficher les notes de chaque utilisateur pour comprendre les recommandations
     std::cout << "\n5. Détails des notes par utilisateur:" << std::endl;
     for (const auto& nom : utilisateurs) {
         std::cout << "\n" << nom << " a noté:" << std::endl;
